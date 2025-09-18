@@ -1,8 +1,25 @@
+// "use client";
 import ProductList from "@/components/ProductList";
 import CategoryList from "@/components/CategoryList";
 import Slider from "@/components/Slider";
+import { useEffect } from "react";
+import { useWixClient } from "@/hooks/useWixClient";
+import { wixClientServer } from "@/lib/wixClientServer";
 
-const HomePage = () => {
+const HomePage = async () => {
+  // const wixClient = useWixClient();
+
+  // const getProducts = async () => {
+  //   const res = await wixClient.products.queryProducts().find();
+  //   console.log("getProducts res", res);
+  // };
+  // useEffect(() => {
+  //   getProducts();
+  // }, [wixClient]);
+
+  const wixClient = await wixClientServer();
+  const res = await wixClient.products.queryProducts().find();
+  console.log(res);
   return (
     <div className="">
       <Slider />
