@@ -19,7 +19,7 @@ const CustomizeProducts = () => {
         <li className="ring-1 ring-number text-white bg-number rounded-md py-1 px-4 text-sm cursor-pointer">
           Medium
         </li>
-        <li className="ring-1 ring-number text-number bg-pink-200 rounded-md py-1 px-4 text-sm cursor-not-allowed">
+        <li className="ring-1 ring-pink-200 text-white bg-pink-200 rounded-md py-1 px-4 text-sm cursor-not-allowed">
           Large
         </li>
       </ul>
