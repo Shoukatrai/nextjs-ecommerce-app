@@ -8,9 +8,11 @@ const PRODUCT_PER_PAGE = 20;
 const ProductList = async ({
   categoryId,
   limit,
+  searchParams,
 }: {
   categoryId: string;
   limit?: number;
+  searchParams?: any;
 }) => {
   const wixClient = await wixClientServer();
   const res = await wixClient.products
@@ -58,7 +60,7 @@ const ProductList = async ({
                       (section: any) => section.title === "shortDesc"
                     )?.description || ""
                   ),
-                }}  
+                }}
               ></div>
             )}
             <button className="rounded-2xl ring-1 ring-number w-max text-number py-2 px-4 text-xs hover:bg-number hover:text-white">
